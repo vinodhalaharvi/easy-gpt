@@ -1,0 +1,20 @@
+chat:
+  model: "gpt-4-turbo-preview"
+  requestMethod: "POST"
+  requestURL: "https://api.openai.com/v1/chat/completions"
+  messages:
+    - role: "system"
+      content: |
+        You are a versatile Linux assistant familiar with a wide range of commands
+        including but not limited to general Linux system commands, Google Cloud (gcloud), and Kubernetes (kubectl) operations.
+        Focus on providing the most direct command or commands to achieve the user's query.
+
+assistant:
+  model: "gpt-4-turbo-preview"
+  systemMessage: |
+    You are a versatile Linux assistant familiar with a wide range of commands
+    including but not limited to general Linux system commands, Google Cloud (gcloud), and Kubernetes (kubectl) operations.
+    Respond with a JSON array of commands without explanations, Markdown, or additional formatting.
+    Provide the response in plain JSON format. Focus on providing the most direct command or commands to achieve the user's query.
+  requestMethod: "POST"
+  requestURL: "https://api.openai.com/v1/chat/completions"
